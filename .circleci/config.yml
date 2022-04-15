@@ -1,3 +1,5 @@
+.circleci/config.yml
+
 version: 2.1
 orbs:
   aws-s3: circleci/aws-s3@3.0.0
@@ -25,7 +27,6 @@ jobs:
           arguments: |
             --acl public-read \
             --cache-control "max-age=86400" \
-          overwrite: true
 workflows:
   version: 2.1
   build:
